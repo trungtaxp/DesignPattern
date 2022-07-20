@@ -9,7 +9,7 @@ use Phamta\DesignPattern\Creational\Builder\Parts\Wheel;
 
 class TruckBuilder implements Builder
 {
-    protected Truck $truck;
+    private Truck $truck;
 
     public function createVehicle()
     {
