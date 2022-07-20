@@ -1,8 +1,10 @@
 <?php
 
-namespace DesignPattern\Creational\Builder\Parts;
+namespace Phamta\DesignPattern\Creational\Builder\Parts;
 
 class Truck extends Vehicle
 {
-
+    public function getName() {
+        return "type truck";
+    }
 }

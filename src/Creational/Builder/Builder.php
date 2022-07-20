@@ -1,9 +1,11 @@
 <?php
 
-namespace DesignPattern\Creational\Builder;
+namespace Phamta\DesignPattern\Creational\Builder;
 
 interface Builder
 {
+    public function createVehicle();
+
     public function addWheel();
 
     public function addEngine();
@@ -11,6 +13,4 @@ interface Builder
     public function addDoors();
 
     public function getVehicle();
-
-    public function createVehicle();
 }

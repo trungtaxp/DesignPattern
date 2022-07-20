@@ -1,32 +1,38 @@
 <?php
 
-namespace DesignPattern\Creational\Builder;
+namespace Phamta\DesignPattern\Creational\Builder;
+
+use Phamta\DesignPattern\Creational\Builder\Parts\Door;
+use Phamta\DesignPattern\Creational\Builder\Parts\Engine;
+use Phamta\DesignPattern\Creational\Builder\Parts\Truck;
+use Phamta\DesignPattern\Creational\Builder\Parts\Wheel;
 
 class TruckBuilder implements Builder
 {
+    protected Truck $truck;
 
-    public function addWheel()
+    public function createVehicle()
     {
-        // TODO: Implement addWheel() method.
-    }
-
-    public function addEngine()
-    {
-        // TODO: Implement addEngine() method.
+        $this->truck = new Truck();
     }
 
     public function addDoors()
     {
-        // TODO: Implement addDoors() method.
+        $this->truck->setPart('TruckDoor', new Door());
+    }
+
+    public function addEngine()
+    {
+        $this->truck->setPart('TruckEngine', new Engine());
+    }
+
+    public function addWheel()
+    {
+        $this->truck->setPart('TruckWheel', new Wheel());
     }
 
     public function getVehicle()
     {
-        // TODO: Implement getVehicle() method.
-    }
-
-    public function createVehicle()
-    {
-        // TODO: Implement createVehicle() method.
+        return $this->truck;
     }
 }
