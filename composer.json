@@ -1,0 +1,15 @@
+{
+    "name": "phamta/design-pattern",
+    "autoload": {
+        "psr-4": {
+            "Phamta\\DesignPattern\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "trungtaxp",
+            "email": "phamtrungta2001@gmail.com"
+        }
+    ],
+    "require": {}
+}
